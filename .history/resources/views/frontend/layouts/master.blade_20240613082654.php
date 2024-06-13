@@ -83,7 +83,7 @@
         SCROLL BUTTON END
     ==============================-->
 
-   
+    <script src="{{ asset('frontend/js/toastr.min.js') }}"></script> 
     <!--jquery library js-->
     <!--jquery library js-->
     <script src="{{ asset('frontend/js/jquery-3.6.0.min.js') }}"></script>
@@ -114,8 +114,7 @@
     <!--main/custom js-->
     <script src="{{ asset('frontend/js/main.js') }}"></script>
    
-    <script src="{{ asset('frontend/js/toastr.min.js') }}"></script> 
-    
+
     <script>
         @if ($errors->any())
             @foreach($errors->all() as $error)

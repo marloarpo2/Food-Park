@@ -46,11 +46,7 @@
     </form>
 </x-guest-layout> --}}
 
-@extends('frontend.layouts.master')
-
-@section('content')
-
-    <!--=============================
+<!--=============================
         BREADCRUMB START
     ==============================-->
     <section class="fp__breadcrumb" style="background: url(images/counter_bg.jpg);">
@@ -82,35 +78,25 @@
                         <div class="fp__login_area">
                             <h2>Welcome back!</h2>
                             <p>sign in to continue</p>
-
-                            <!--=============== Sign In Form===================--->
-                            
-                            
-                            <form method="POST" action="{{ route('login') }}">
-                                 @csrf
+                            <form>
                                 <div class="row">
-                                    <!-- Email Address -->
                                     <div class="col-xl-12">
                                         <div class="fp__login_imput">
                                             <label>email</label>
-                                            <input type="email" name="email" placeholder="Email" required value="{{ old('email') }}">
+                                            <input type="email" placeholder="Email">
                                         </div>
                                     </div>
-
-                                    <!-- Password -->    
                                     <div class="col-xl-12">
                                         <div class="fp__login_imput">
                                             <label>password</label>
-                                            <input type="password" placeholder="Password" name="password">
+                                            <input type="password" placeholder="Password">
                                         </div>
                                     </div>
-
-                                     <!-- Remember me -->  
                                     <div class="col-xl-12">
                                         <div class="fp__login_imput fp__login_check_area">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault" name="remember">
+                                                    id="flexCheckDefault">
                                                 <label class="form-check-label" for="flexCheckDefault">
                                                     Remeber Me
                                                 </label>
@@ -118,7 +104,6 @@
                                             <a href="forgot_password.html">Forgot Password ?</a>
                                         </div>
                                     </div>
-
                                     <div class="col-xl-12">
                                         <div class="fp__login_imput">
                                             <button type="submit" class="common_btn">login</button>
@@ -127,6 +112,12 @@
                                 </div>
                             </form>
                             <p class="or"><span>or</span></p>
+                            <ul class="d-flex">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            </ul>
                             <p class="create_account">Dont’t have an aceount ? <a href="sign_up.html">Create Account</a>
                             </p>
                         </div>
@@ -138,5 +129,3 @@
     <!--=========================
         SIGNIN END
     ==========================-->
-
-@endsection

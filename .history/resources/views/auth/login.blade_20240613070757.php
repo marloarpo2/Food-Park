@@ -85,32 +85,33 @@
 
                             <!--=============== Sign In Form===================--->
                             
-                            
-                            <form method="POST" action="{{ route('login') }}">
-                                 @csrf
+                            <form method="POST" action="{{ route('login') }}>
                                 <div class="row">
-                                    <!-- Email Address -->
                                     <div class="col-xl-12">
                                         <div class="fp__login_imput">
                                             <label>email</label>
-                                            <input type="email" name="email" placeholder="Email" required value="{{ old('email') }}">
+                                            <input type="email" name="name" placeholder="Email" required>
                                         </div>
                                     </div>
 
-                                    <!-- Password -->    
+                                            <!-- Email Address -->
+                                    <div>
+                                        <x-input-label for="email" :value="__('Email')" />
+                                        <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+                                        <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                                    </div>
+
                                     <div class="col-xl-12">
                                         <div class="fp__login_imput">
                                             <label>password</label>
-                                            <input type="password" placeholder="Password" name="password">
+                                            <input type="password" placeholder="Password">
                                         </div>
                                     </div>
-
-                                     <!-- Remember me -->  
                                     <div class="col-xl-12">
                                         <div class="fp__login_imput fp__login_check_area">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault" name="remember">
+                                                    id="flexCheckDefault">
                                                 <label class="form-check-label" for="flexCheckDefault">
                                                     Remeber Me
                                                 </label>
@@ -118,7 +119,6 @@
                                             <a href="forgot_password.html">Forgot Password ?</a>
                                         </div>
                                     </div>
-
                                     <div class="col-xl-12">
                                         <div class="fp__login_imput">
                                             <button type="submit" class="common_btn">login</button>

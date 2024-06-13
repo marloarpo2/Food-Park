@@ -86,14 +86,13 @@
                             <!--=============== Sign In Form===================--->
                             
                             
-                            <form method="POST" action="{{ route('login') }}">
-                                 @csrf
+                            <form method="POST" action="{{ route('login') }}>
                                 <div class="row">
                                     <!-- Email Address -->
                                     <div class="col-xl-12">
                                         <div class="fp__login_imput">
                                             <label>email</label>
-                                            <input type="email" name="email" placeholder="Email" required value="{{ old('email') }}">
+                                            <input type="email" name="name" placeholder="Email" required>
                                         </div>
                                     </div>
 
@@ -119,6 +118,13 @@
                                         </div>
                                     </div>
 
+                                            <!-- Remember Me -->
+        <div class="block mt-4">
+            <label for="remember_me" class="inline-flex items-center">
+                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
+                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+            </label>
+        </div>
                                     <div class="col-xl-12">
                                         <div class="fp__login_imput">
                                             <button type="submit" class="common_btn">login</button>
