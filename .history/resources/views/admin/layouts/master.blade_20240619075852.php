@@ -56,7 +56,6 @@
   <script src="{{ asset('admin/assets/modules/nicescroll/jquery.nicescroll.min.js') }}"></script>
   <script src="{{ asset('admin/assets/js/stisla.js') }}"></script>
   <script src="{{ asset('admin/assets/js/toastr.min.js') }}"></script>
-  <script src="{{ asset('admin/assets/modules/upload-preview/assets/js/jquery.uploadPreview.min.js') }}"></script>
 
 
   <!-- Template JS File -->
