@@ -23,7 +23,7 @@ Route::get('/',[FrontendController::class, 'index'])->name('home');
 
 
 Route::group(['middleware' => 'auth'], function(){
-    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
 
 // Route::get('/dashboard', function () {
